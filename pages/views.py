@@ -5,3 +5,6 @@ class HomePageView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = "about.html"
+
+class FAQPageView(TemplateView):
+    template_name = "faq.html"

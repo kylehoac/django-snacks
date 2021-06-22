@@ -12,6 +12,11 @@ class PagesTest(SimpleTestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
+    def test_faq_page_200(self):
+        url = reverse('faq')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
     def test_home_page_template_used(self):
         url = reverse('home')
         response = self.client.get(url)
@@ -22,5 +27,11 @@ class PagesTest(SimpleTestCase):
         url = reverse('about')
         response = self.client.get(url)
         self.assertTemplateUsed(response, "about.html")
+        self.assertTemplateUsed(response, "base.html")
+
+    def test_faq_page_template_used(self):
+        url = reverse('about')
+        response = self.client.get(url)
+        self.assertTemplateUsed(response, "faq.html")
         self.assertTemplateUsed(response, "base.html")
 
