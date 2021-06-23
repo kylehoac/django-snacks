@@ -10,10 +10,10 @@
     <header>
        <h1>Django Snacks</h1>
        <nav>
-           <!-- <a href="/pages">Home</a> -->
            <a href="{% url 'home' %}">Home</a>
            <a href="{% url 'about' %}">About</a>
            <a href="{% url 'faq' %}">FAQ</a>
+           <a href="{% url 'snacks_list' %}">Snacks List</a>
        </nav>
     </header>
     {% block content %}
