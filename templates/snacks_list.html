@@ -4,4 +4,6 @@
 {% for snacks in object_list %}
 <a href="{% url 'snacks_detail' snacks.pk %}">{{ snacks.name }}</a>
 {% endfor %}
+<br>
+<a href="{% url 'snacks_create' %}">Create a snack!</a>
 {% endblock content %}
